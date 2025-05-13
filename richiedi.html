@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Richiedi Ricostruzione 3D | Ponde3D</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+  <div class="max-w-2xl mx-auto py-16 px-4">
+    <h1 class="text-3xl font-bold mb-6 text-center text-indigo-600">Richiedi una Ricostruzione 3D</h1>
+    <form action="#" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded shadow-md">
+      <div class="mb-4">
+        <label for="organo" class="block font-semibold mb-2">Organo da ricostruire</label>
+        <select id="organo" name="organo" required class="w-full p-2 border rounded">
+          <option value="">Seleziona un organo</option>
+          <option value="rene">Rene</option>
+          <option value="pancreas">Pancreas</option>
+          <option value="fegato">Fegato</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="file" class="block font-semibold mb-2">Carica immagine TC (DICOM)</label>
+        <input type="file" id="file" name="file" accept=".dcm,.zip" required class="w-full p-2 border rounded bg-white">
+      </div>
+      <div class="mb-6">
+        <label for="email" class="block font-semibold mb-2">Email per la consegna</label>
+        <input type="email" id="email" name="email" placeholder="esempio@tuomail.com" required class="w-full p-2 border rounded">
+      </div>
+      <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Invia richiesta</button>
+    </form>
+    <p class="text-center text-sm text-gray-500 mt-6">Costo fisso per ricostruzione: <strong>€250</strong></p>
+    <p class="text-center text-xs text-gray-400 mt-2">powered by BrugONE</p>
+  </div>
+</body>
+</html>
